@@ -28,16 +28,25 @@ def main():
         screen.blit(bg_img, [-x+3200, 0])
         screen.blit(bg_img2, [-x+4800, 0])
 
+
         key_lst = pg.key.get_pressed()
+
+        x1 = -1
+        y1 = 0
         if key_lst[pg.K_UP]:
-            kouka3_rct.move_ip((0, -1))
+            x1 = 0
+            y1 = -1
         if key_lst[pg.K_DOWN]:
-            kouka3_rct.move_ip((0, 1))
+            x1 = 0
+            y1 = 1
         if key_lst[pg.K_LEFT]:
-            kouka3_rct.move_ip((-1, 0))
+            x1 = -1
+            y1 = 0
         if key_lst[pg.K_RIGHT]:
-            kouka3_rct.move_ip((2, 0))
-        kouka3_rct.move_ip((-1, 0))
+            x1 = 1
+            y1 = 0
+        kouka3_rct.move_ip((x1, y1))
+  
 
         screen.blit(kouka3_img, kouka3_rct)
         pg.display.update()
