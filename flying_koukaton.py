@@ -43,7 +43,7 @@ def main():
             x1 = -1
             y1 = 0
         if key_lst[pg.K_RIGHT]:
-            x1 = 1
+            x1 = 2
             y1 = 0
         kouka3_rct.move_ip((x1, y1))
   
