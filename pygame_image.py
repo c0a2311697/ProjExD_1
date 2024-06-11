@@ -36,7 +36,8 @@ def main():
         if key_lst[pg.K_LEFT]:
             kouka3_rct.move_ip((-1, 0))
         if key_lst[pg.K_RIGHT]:
-            kouka3_rct.move_ip((1, 0))
+            kouka3_rct.move_ip((2, 0))
+        kouka3_rct.move_ip((-1, 0))
 
         screen.blit(kouka3_img, kouka3_rct)
         pg.display.update()
