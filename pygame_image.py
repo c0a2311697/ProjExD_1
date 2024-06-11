@@ -19,14 +19,15 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
+        x = tmr % 800
+        screen.blit(bg_img, [-x, 0])
 
         kouka3_rct = kouka3_img.get_rect()
         kouka3_rct.center = 300,200
         screen.blit(kouka3_img, kouka3_rct)
         pg.display.update()
         tmr += 1        
-        clock.tick(10)
+        clock.tick(100)
 
 
 if __name__ == "__main__":
