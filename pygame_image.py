@@ -20,7 +20,10 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
-        screen.blit(kouka3_img, [100, 100])
+
+        kouka3_rct = kouka3_img.get_rect()
+        kouka3_rct.center = 300,200
+        screen.blit(kouka3_img, kouka3_rct)
         pg.display.update()
         tmr += 1        
         clock.tick(10)
